@@ -1,0 +1,66 @@
+@import variables
+
+.header-grid-container
+  display: grid
+  position: fixed
+  grid-template-areas: "nav article"
+  grid-template-rows: 63vw
+  grid-template-columns: 33vw 67vw
+  grid-gap: 0px
+  margin: 0
+  z-index: 0
+  background: $dark
+  justify-items: flex-end
+
+nav
+  h1
+    margin-top: 50%
+    span
+
+article
+  text-align: center
+
+  img
+    margin: 5% auto
+    width: 70%
+    height: auto
+    border-radius: 10px
+
+#navbar
+  grid-area: nav
+
+#article
+  grid-area: article
+
+body
+  color: $white
+
+main
+  .space
+    padding-top: 62vw
+
+  .main-content
+    position: relative
+    z-index: 1
+    background: $dark
+    box-shadow: 0px -8px 69px -36px $dark
+    border: 1px solid $dark-light
+    padding: 50px 0
+
+.highlight
+  background: $green-gradient
+  padding: 8px
+
+
+
+
+// Media
+
+@media all and (max-width: 575px)
+  .grid-container
+    grid-template-areas: "nav" "article"
+    grid-template-rows: 70vw
+    grid-template-columns: 1fr
+  #navbar
+    width: 100vw
+    height: auto
