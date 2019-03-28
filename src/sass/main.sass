@@ -5,10 +5,9 @@
 
 body
   color: $white
-  background: $white
   text-align: center
   font-family: 'Roboto Slab', serif
-  padding: 20px
+
 
 // Header styles
 // Grid settings
@@ -39,17 +38,25 @@ nav
     span
 
 article
-  background: $white-gradient
   width: 100%
   height: auto
   align-items: center
+
+  .article-background
+    position: absolute
+    width: 68%
+    height: 45%
+    margin: 30px auto
+    background: $white-gradient
+    border-radius: 10px
+    z-index: 1
 
   .text-article
     color: $dark-light
     margin-top: 6%
     width: 36%
     position: absolute
-
+    z-index: 3
     h1
       font-size: 1.9em
       font-weight: 300
@@ -58,11 +65,12 @@ article
       margin: 0 auto
       margin-left: 8%
   img
+    position: relative
     width: 50%
     height: 40%
     margin: 5% auto
     margin-left: 28%
-
+    z-index: 2
 
 
 
@@ -75,7 +83,7 @@ main
 
   .main-content
     position: relative
-    z-index: 1
+    z-index: 10
     background: $dark
     box-shadow: 0px -8px 69px -36px $dark
     border: 1px solid $dark-light
@@ -85,7 +93,9 @@ main
   background: $green-gradient
   padding: 5px 12px
 
-
+#name
+  padding: 0 10px
+  color: $white
 
 
 // Media
@@ -105,3 +115,29 @@ main
 @media all and (max-width: 667px)
   body
     font-size: 0.3rem
+@media all and (max-width: 414px)
+  body
+    font-size: 0.39rem
+  #name
+    padding: 0 3px
+  .header-grid-container
+    grid-template-areas: "nav" "article"
+    grid-template-rows: 50vw
+    grid-template-columns: 100vw
+  main
+    .space
+      padding-top: 590px
+  article
+    background: $white-gradient
+    width: 375px
+    height: 410px
+    .text-article
+      margin-top: 30%
+      width: 50%
+    img
+      width: 90%
+      height: auto
+      margin: 5% auto
+      margin-left: 20%
+  .article-background
+    display: none
