@@ -32,12 +32,19 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     }, {
-      test: /\.(png|jpe?g|gif|svg|woff|woff2|eot|ttf)$/,
+      test: /\.(png|jpe?g|gif)$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
       }
     }, {
+      test: /\.(svg|woff|woff2|eot|ttf)$/,
+      loader: 'file-loader',
+      options: {
+        name: `${PATHS.assets}fonts/[name].[ext]`,
+      }
+    },
+    {
       test: /\.css$/,
       use: [
         'style-loader',
@@ -80,7 +87,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/static`, to: '' },    
     ])
   ],
 }
