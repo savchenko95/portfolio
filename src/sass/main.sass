@@ -16,7 +16,7 @@
 body
   color: $white
   text-align: center
-  font-family: 'Roboto Slab', serif
+  font-family: 'Poppins', sans-serif
 a
   text-decoration: none
   color: inherit
@@ -57,13 +57,18 @@ nav
     margin-top: 5%
   .link-text
     display: block
-    margin: 8px auto
-    font-size: 1.3em
+    margin: 7px auto
+    font-size: 1.2em
+    font-weight: 300
     cursor: pointer
+    i
+      font-size: 1.2em
+      position: relative
+      top: 4px
     p
       display: inline-block
       margin: 0 8px
-      padding: 3px
+      padding: 4px
 
 // ЗАПОМНИТЬ!!! ТОЛЬКО ТАК МОЖНО ЗАЛИТЬ ГРАДИЕНТОМ ПОДЧЕРКИВАНИЕ АДЕКВАТНО
 .gradient-underline
@@ -119,87 +124,20 @@ article
     position: absolute
     z-index: 3
     h1
-      font-size: 1.9em
+      font-size: 1.8em
       font-weight: 300
       line-height: 1.2
       text-align: left
       margin: 0 auto
       margin-left: 8%
-    .qualities
-      position: absolute
-      bottom: 0
-      left: 5%
-      display: grid
-      grid-template-rows: 1fr 1fr 1fr
-      grid-template-columns: 1fr 1fr 1fr
-      height: auto
-      align-items: center
-      .qualities-items
-        display: flex
-        margin: 10px auto
-        font-weight: 400
-        font-size: 1em
-        font-style: italic
-        span
-          position: relative
-          z-index: 5
-          background: $orange-gradient
-          padding: 0.4em
-// Grid qualities
 
-#qualities1
-  grid-row-start: 1
-  grid-column-start: 1
-  grid-row-end: 2
-  grid-column-end: 2
-#qualities2
-  grid-row-start: 2
-  grid-column-start: 1
-  grid-row-end: 3
-  grid-column-end: 3
-#qualities3
-  grid-row-start: 3
-  grid-column-start: 2
-  grid-row-end: 4
-  grid-column-end: 4
 
-#shadow1
-  position: absolute
-  left: 2%
-  top: 5%
-  z-index: 4
-  width: 27%
-  height: 20%
-  background: $orange-gradient
-  filter: blur(4px)
-  padding: 0.2em
-#shadow2
-  position: absolute
-  left: 14%
-  top: 38%
-  z-index: 4
-  width: 35%
-  height: 20%
-  background: $orange-gradient
-  filter: blur(4px)
-  padding: 0.2em
-#shadow3
-  position: absolute
-  left: 30%
-  top: 71%
-  z-index: 4
-  width: 70%
-  height: 20%
-  background: $orange-gradient
-  filter: blur(4px)
-  padding: 0.2em
 // Main container styles
 
 
 main
   .space
     padding-top: 62vw
-
   .main-content
     position: relative
     z-index: 10
@@ -208,7 +146,39 @@ main
     box-shadow: 0px -8px 69px -36px $dark
     border: 1px solid $dark-light
     padding: 50px 0
-
+    .description
+      width: 40%
+      text-align: left
+      i
+        position: absolute
+        top: 28%
+        left: 9.5%
+        font-size: 5em
+        transform-origin: 0 0
+        transform: rotate(-15deg)
+      h2
+        position: relative
+        left: 8%
+        top: 0
+        font-size: 2em
+      p
+        font-weight: 200
+        font-size: 1.2em
+        line-height: 1.5em
+    .qualities
+      width: 40%
+      h2
+        font-size: 2em
+      .qualities-list
+        text-align: left
+        margin-left: 17%
+        font-weight: 200
+        font-size: 1.2em
+        line-height: 1.5em
+#about
+  padding: 10% 0
+  display: flex
+  justify-content: center
 
 
 // Media
