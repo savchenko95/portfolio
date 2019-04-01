@@ -56,31 +56,42 @@ nav
     position: absolute
     margin-top: 5%
   .link-text
+    width: 50%
     display: block
-    margin: 7px auto
+    margin: 6px 0
     font-size: 1.2em
     font-weight: 300
     cursor: pointer
+    &:hover
+      .gradient-underline
+        background-position: 0% 100%
     i
       font-size: 1.2em
       position: relative
       top: 4px
     p
       display: inline-block
-      margin: 0 8px
+      margin: 0
       padding: 4px
-
-// ЗАПОМНИТЬ!!! ТОЛЬКО ТАК МОЖНО ЗАЛИТЬ ГРАДИЕНТОМ ПОДЧЕРКИВАНИЕ АДЕКВАТНО
 .gradient-underline
-  background: $orangepink-gradient
-  background-position: 0 100%
-  background-size: 100% 1.5px
-  background-repeat: repeat-x
-  &:hover
-    background: $purple-gradient
-    background-position: 0 100%
-    background-size: 100% 1.5px
-    background-repeat: repeat-x
+  transition: 1.5s cubic-bezier(.22,1,.32,1)
+  background: linear-gradient(to right, rgb(193, 101, 221), rgb(92, 39, 254),  rgb(250, 205, 104), rgb(252, 118, 179))
+  background-size: 300% 300%
+  background-position: 100% 0%
+  position: relative
+  left: 15%
+  height: 2px
+
+#gr1
+  width: 45%
+#gr2
+  width: 35%
+#gr3
+  width: 77%
+#gr4
+  width: 37%
+
+
 // navbar-text-background
 .highlight
   background: $orangepink-gradient
@@ -190,9 +201,6 @@ main
     transform: rotate(-30deg)
   100%
     transform: rotate(-35deg)
-
-
-
 
 // Media
 
