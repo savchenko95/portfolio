@@ -149,13 +149,14 @@ main
     .description
       width: 40%
       text-align: left
-      i
+      .icon-hello
         position: absolute
-        top: 28%
-        left: 9.5%
+        top: 25.6%
+        left: 10.7%
         font-size: 5em
-        transform-origin: 0 0
-        transform: rotate(-15deg)
+        transform-origin: 90% 90%
+        transform: rotate(-25deg)
+        animation: rotate-animation 1.1s linear infinite alternate
       h2
         position: relative
         left: 8%
@@ -179,6 +180,18 @@ main
   padding: 10% 0
   display: flex
   justify-content: center
+
+// Animation
+
+@keyframes rotate-animation
+  0%
+    transform: rotate(-25deg)
+  50%
+    transform: rotate(-30deg)
+  100%
+    transform: rotate(-35deg)
+
+
 
 
 // Media
