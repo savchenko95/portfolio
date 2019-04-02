@@ -1,0 +1,59 @@
+@import variables
+
+
+
+main
+  .space
+    padding-top: 62vw
+  .main-content
+    position: relative
+    z-index: 10
+    background: $dark
+    color: $white
+    box-shadow: 0px -8px 69px -36px $dark
+    border: 1px solid $dark-light
+    padding: 50px 0
+    .description
+      width: 40%
+      text-align: left
+      .icon-hello
+        position: absolute
+        top: 25.6%
+        left: 10.7%
+        font-size: 5em
+        transform-origin: 90% 90%
+        transform: rotate(-25deg)
+        animation: rotate-animation 1.1s linear infinite alternate
+      h2
+        position: relative
+        left: 8%
+        top: 0
+        font-size: 2em
+      p
+        font-weight: 200
+        font-size: 1.2em
+        line-height: 1.5em
+    .qualities
+      width: 40%
+      h2
+        font-size: 2em
+      .qualities-list
+        text-align: left
+        margin-left: 17%
+        font-weight: 200
+        font-size: 1.2em
+        line-height: 1.5em
+#about
+  padding: 10% 0
+  display: flex
+  justify-content: center
+
+// Animation
+
+@keyframes rotate-animation
+  0%
+    transform: rotate(-25deg)
+  50%
+    transform: rotate(-30deg)
+  100%
+    transform: rotate(-35deg)
