@@ -36,8 +36,9 @@ nav
     font-weight: 300
     cursor: pointer
     &:hover
-      .gradient-underline
-        background-position: 0% 100%
+      .gradient-underline:after
+        content: " "
+        width: 100%
     i
       font-size: 1.2em
       position: relative
@@ -46,14 +47,22 @@ nav
       display: inline-block
       margin: 0
       padding: 4px
+
 .gradient-underline
-  transition: 1.5s cubic-bezier(.22,1,.32,1)
-  background: linear-gradient(to right, rgb(193, 101, 221), rgb(92, 39, 254),  rgb(250, 205, 104), rgb(252, 118, 179))
-  background-size: 300% 300%
-  background-position: 100% 0%
+  background: $green-gradient
   position: relative
   left: 15%
   height: 2px
+
+
+.gradient-underline:after
+  transition: 1.5s cubic-bezier(0,.34,.13,.98)
+  content: " "
+  position: absolute
+  width: 0%
+  height: 2px
+  background: $white
+
 
 #gr1
   width: 45%
@@ -65,7 +74,7 @@ nav
   width: 37%
 
 .highlight
-  background: $orangepink-gradient
+  background: $lightgreen-gradient
   padding: 10px 12px
   opacity: 0.9
   color: $dark-light
@@ -75,8 +84,9 @@ nav
   margin-top: 20px
 #name
   padding: 0 10px
-  color: $dark
-  background: $orangepink-gradient
+  color: $dark-light
+  background: $lightgreen-gradient
+  background-size: 200% 200%
   font-weight: 400
 
 
