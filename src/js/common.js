@@ -1,9 +1,10 @@
 
 var $ = require("jquery");
 
-// Scroll----------------------
+
 
 $(document).ready(function(){
+  // Scroll----------------------
     $("a[href*=\\#]").on("click", function(e){
         var anchor = $(this);
         $('html, body').stop().animate({
@@ -12,6 +13,21 @@ $(document).ready(function(){
         e.preventDefault();
         return false;
     });
-});
+  //------------------------------
 
-//------------------------------
+  // Modal-window-----------------
+
+    $( ".project-card" ).on("click", function(){
+      var open = $(this).parent().find(".modal");
+      open.addClass("modal--active");
+
+      var close = $(this).parent().find(".modal-close");
+      close.on("click", function(){
+          $(".modal").removeClass("modal--active");
+      });
+    });
+
+
+
+  //------------------------------
+});
