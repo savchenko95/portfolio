@@ -170,37 +170,90 @@ main
   width: 100%
   height: 100%
   transition: all .2s
-  .modal-container
+  .modal-grid-container
     position: absolute
     top: 50%
     left: 50%
     width: 70%
-    padding: 1.25rem
+    padding: 2rem
     border-radius: .3rem
     color: $dark
     background: $white
     transform: translate(-45%,-45%) scale(.1)
     transition: all .3s
-    .modal-top
-      display: flex
-      h2
-        margin-left: 1%
-        font-weight: 300
-      .modal-close
-        cursor: pointer
-        position: absolute
-        left: 97%
-        top: 10%
-        font-size: 2em
-        font-weight: 300
+  .modal-grid-container
+    display: grid
+    grid-template-areas: "h2 h2 close" "image text text" "image button button"
+    grid-template-rows: .5fr 1fr 1fr
+    grid-template-columns: 1.5fr 1fr 1fr
+    grid-gap: 3%
+    h2
+      grid-area: h2
+      text-align: left
+      margin-left: 1%
+      font-weight: 400
+    img
+      grid-area: image
+      width: 60%
+      height: auto
+      margin-left: 2%
+      border-radius: 3px
+    p
+      grid-area: text
+      font-size: 1.3em
+      font-weight: 300
+      margin-top: 1%
+      margin-left: -24%
+      text-align: left
+    .modal-close
+      grid-area: close
+      cursor: pointer
+      position: absolute
+      left: 90%
+      top: 10%
+      font-size: 2em
+      font-weight: 300
+      padding: 4px 10px
+      transition: all .4s
+      &:hover
+        background: $dark
+        color: $white
+    .modal-btns
+      grid-area: button
+      .modal-btn
+        position: relative
+        left: 25%
+        top: 45%
+        background: $dark
+        color: $white
+        border: 0
+        letter-spacing: .3rem
+        border-radius: 6rem
+        padding: 10px 40px
+        margin-left: 3%
+        font-size: 1.5em
+        box-shadow: 0.3rem 0.3rem 2.5rem $dark-light
+        transition: all .3s
+        line-height: 1
+        &:active
+          box-shadow: 0.3rem 0.3rem 1.25rem $dark-light
+          top: 50%
+        &:hover
+          outline: 0
+          background-color: $white
+          color: $dark
+          box-shadow: 0.5rem 0.5rem 1.875rem $dark-light
 
 .modal--active
   opacity: 1
   visibility: visible
   background-color: rgba($dark-light, 0.8)
-
-  .modal-container
+  .modal-grid-container
     transform: translate(-50%,-50%) scale(1)
+
+
+
+
 // Animation
 
 @keyframes rotate-animation
