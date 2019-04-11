@@ -14,9 +14,7 @@ $(document).ready(function(){
         return false;
     });
   //------------------------------
-
   // Modal-window-----------------
-
     $( ".project-card" ).on("click", function(){
       var open = $(this).parent().find(".modal");
       open.addClass("modal--active");
@@ -26,8 +24,12 @@ $(document).ready(function(){
           $(".modal").removeClass("modal--active");
       });
     });
-
-
-
+  //------------------------------
+  // Fade Out form after submit---
+    var submitted=false;
+    $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(2000);
+      $('#gform').prepend('Your submission has been processed...');
+    });
   //------------------------------
 });

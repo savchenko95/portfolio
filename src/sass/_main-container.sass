@@ -3,8 +3,7 @@
 
 
 main
-  .space
-    padding-top: 62vw
+  padding-top: 55vw
   .main-content
     position: relative
     z-index: 10
@@ -21,7 +20,7 @@ main
         text-align: left
         .icon-hello
           position: absolute
-          top: 8%
+          top: 6%
           left: 10.7%
           font-size: 5em
           transform-origin: 90% 90%
@@ -79,11 +78,14 @@ main
       padding: 10%
       .description
         width: 60%
-        margin-right: 40%
-
+        margin: 0 40% 0 5%
+    .contact
+      @extend .projects
+      padding: 10%
 
 .projects-grid-container
-  margin: 5% auto 0 auto
+  margin: 7% auto 0 auto
+  padding: 0 7%
   display: grid
   grid-template-columns: repeat(auto-fit,minmax(350px,1fr))
   grid-gap: 3%
