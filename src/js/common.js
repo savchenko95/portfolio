@@ -28,8 +28,8 @@ $(document).ready(function(){
   // Fade Out form after submit---
     var submitted=false;
     $('#gform').on('submit', function(e) {
-      $('#gform *').fadeOut(2000);
-      $('#gform').prepend('Your submission has been processed...');
+      $('#gform *').fadeOut(1500);
+      $('#gform').prepend('Message sent...');
     });
   //------------------------------
 });
