@@ -1,0 +1,58 @@
+@import variables
+
+
+.contact
+  display: flex
+  padding: 1% 20%
+  text-align: left
+  form
+    width: 100%    
+    h1
+      font-size: 2em
+      font-weight: 400
+      margin: 3% auto
+    textarea
+      background: $dark-smoth
+      border: none
+      border-left: 2px solid $light-green
+      padding: 1rem
+      width: 80%
+      height: 400px
+      resize: none
+      margin-right: 20%
+      margin-bottom: 5%
+    p
+      font-size: 1.3em
+      display: inline-block
+      margin: 2em .5em 0 3em
+    span
+      font-size: 1.3em
+      margin-left: .5em
+    .email
+      background: none
+      border: none
+      border-bottom: 1px solid $light-green
+      color: $white
+      width: 21%
+      background: $dark-smoth
+      padding: .4rem
+    .name
+      @extend textarea
+      display: block
+      width: 20%
+      height: 1em
+      margin: 1.5em auto 0 5em
+    .btn-form
+      position: relative
+      left: 30%
+      color: $white
+      font-size: 1.5rem
+      font-weight: 100
+      text-decoration: none
+      text-transform: uppercase
+      letter-spacing: .24rem
+      padding: 1rem 5rem
+      margin: 5rem auto
+      border: 1px solid $light-green
+      border-radius: 999px
+      background: none
