@@ -1,0 +1,23 @@
+@import variables
+
+
+#go-top
+  position: fixed
+  z-index: 999
+  bottom: 30px
+  right: 60px
+  cursor: pointer
+  background: $dark-light
+  border: 1px solid $dark
+  &:hover
+    background: $white
+    transition: all .3s ease
+    .svg-icon-arrow
+      .arrow
+        fill: $dark
+  .svg-icon-arrow
+    width: 40px
+    height: 40px
+    padding: .4em .7em
+    .arrow
+      fill: $white
