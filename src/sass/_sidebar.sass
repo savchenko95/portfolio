@@ -1,0 +1,26 @@
+@import variables
+
+
+.sidebar
+  position: fixed
+  z-index: 999
+  left: -200px
+  top: 15vw
+  display: grid
+  grid-template-columns: repeat(auto-fit,minmax(50px,1fr))
+  transform: translateX(0)
+  transition: .5s ease
+  .sidebar-link
+    cursor: pointer
+    background: $dark-light
+    border: 1px solid $dark
+    padding: .5rem
+    &:hover
+      background: $white
+      transition: .3s ease
+      .sidebar-link-icon
+        fill: $dark
+    .sidebar-link-icon
+      width: 40px
+      height: 40px
+      fill: $white
