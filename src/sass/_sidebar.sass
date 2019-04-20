@@ -8,19 +8,24 @@
   top: 15vw
   display: grid
   grid-template-columns: repeat(auto-fit,minmax(50px,1fr))
+  grid-gap: .5rem
   transform: translateX(0)
   transition: .5s ease
+  padding: .4rem
+  background: $dark-light
   .sidebar-link
     cursor: pointer
     background: $dark-light
     border: 1px solid $dark
     padding: .5rem
+    width: 40px
+    height: 40px
     &:hover
       background: $white
       transition: .3s ease
       .sidebar-link-icon
         fill: $dark
     .sidebar-link-icon
-      width: 40px
-      height: 40px
+      width: 100%
+      height: 100% 
       fill: $white
