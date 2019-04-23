@@ -1,5 +1,4 @@
 import './css/normalize.css'
 import './fonts/_fonts.css'
-import '../node_modules/magic.css/magic.min.css'
 import './sass/main.sass'
 import './js/common.js'
