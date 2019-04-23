@@ -1,4 +1,6 @@
 import './css/normalize.css'
+import '../node_modules/revealator-master/fm.revealator.jquery.css'
+import '../node_modules/revealator-master/fm.revealator.jquery.js'
 import './fonts/_fonts.css'
 import './sass/main.sass'
 import './js/common.js'
