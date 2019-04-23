@@ -12,12 +12,12 @@ export function Arrow() {
     $(function() {
       $.fn.scrollToTop = function() {
         $(this).hide().removeAttr("href");
-        if ($(window).scrollTop() >= "500") $(this).fadeIn(500)
+        if ($(window).scrollTop() >= "1500") $(this).fadeIn(500)
 
         var scrollDiv = $(this);
 
         $(window).scroll(function() {
-          if ($(window).scrollTop() <= "500") $(scrollDiv).fadeOut(300)
+          if ($(window).scrollTop() <= "1500") $(scrollDiv).fadeOut(300)
           else $(scrollDiv).fadeIn("slow")
         });
         $(this).click(function() {

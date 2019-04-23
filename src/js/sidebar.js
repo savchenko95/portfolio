@@ -40,12 +40,12 @@ export function Sidebar() {
     $(function() {
       $.fn.scrollToLink = function() {
         $(this).removeAttr("href");
-        if ($(window).scrollTop() >= "900") $(this).css('transform', 'translateX(200px)');
+        if ($(window).scrollTop() >= "1650") $(this).css('transform', 'translateX(200px)');
 
         var scrollDiv = $(this);
 
         $(window).scroll(function() {
-          if ($(window).scrollTop() <= "900") $(scrollDiv).css('transform', 'translateX(0)');
+          if ($(window).scrollTop() <= "1650") $(scrollDiv).css('transform', 'translateX(0)');
           else $(scrollDiv).css('transform', 'translateX(200px)');
         });
       };

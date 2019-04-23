@@ -5,7 +5,7 @@
   display: grid
   position: fixed
   grid-template-areas: "nav article"
-  grid-template-rows: 100vw
+  grid-template-rows: $viewport
   grid-template-columns: 30vw 70vw
   grid-gap: 0px
   margin: 0
@@ -21,14 +21,17 @@
 
 .navbar
   text-align: left
+  width: 76%
+  height: auto
+  margin: 0 12%
   h1
-    margin-top: 51%
-    margin-bottom: 90%
+    margin-top: calc(#{$viewport}/9)
+    margin-bottom: calc(#{$viewport}/5)
     font-weight: 400
   .logo
     position: absolute
     margin-top: 5%
-  .link-text
+  .navbar-link
     width: 50%
     display: block
     margin: 6px 0
@@ -51,7 +54,7 @@
 .gradient-underline
   background: $green-gradient
   position: relative
-  left: 15%
+  left: calc(#{$viewport}/60)
   height: 2px
 
 
@@ -74,14 +77,30 @@
   width: 37%
 
 .highlight
-  background: $lightgreen-gradient
-  padding: 10px 12px
+  position: relative
+  display: inline-block
+  padding: .8rem
   opacity: 0.9
-  color: $dark-light
+  color: $dark
+  &:before
+    $padding: .2em
+    content: ""
+    position: absolute
+    top: $padding
+    right: 0
+    bottom: $padding
+    left: 0
+    background: $lightgreen-gradient
+    transform-origin: left center
+    animation: highlight__scaleIn calc(2s*var(--nth)) cubic-bezier(.22,1,.32,1) normal
+
+.highlight__inner
+  position: relative
+
 
 #nav-name
   display: inline-block
-  margin-top: 20px
+  margin-top: .1rem
 #name
   padding: 0 10px
   color: $dark-light
@@ -123,3 +142,9 @@ article
       text-align: left
       margin: 0 auto
       margin-left: 8%
+
+@keyframes highlight__scaleIn
+    0%
+      transform: scaleX(0)
+    100%
+      transform: scaleX(1)
